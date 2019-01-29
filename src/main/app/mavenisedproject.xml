@@ -10,6 +10,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     <flow name="mavenisedprojectFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/mvnproject" doc:name="HTTP"/>
         <logger message="input data: #[message.payloadAs(java.lang.String)]" level="INFO" doc:name="Logger"/>
+        <logger message="testing repo changes" level="INFO" doc:name="addedLogger"/>
         <set-payload value="{
 &quot;status&quot;: &quot;Hello World&quot;
 }" doc:name="Set Payload"/>
